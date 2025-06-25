@@ -186,7 +186,7 @@ class Matrix(metaclass=MetaMatrix):
     def __truediv__(self, other):
         """Handle scalar and matrix division."""
 
-        # A / n = A * ( 1 / n)
+        # A / n = A * (1 / n)
         if type(other).__name__ == "int" or type(other).__name__ == "float":
             return self * (other ** -1)
     
@@ -238,7 +238,7 @@ class Matrix(metaclass=MetaMatrix):
 
     @staticmethod
     def subMatrix(matrix, row, col):
-        """Deduce the submatrix of the object formed by remove the current row and column of entry."""
+        """Deduce the submatrix of the object formed by removing the current row and column of entry."""
         sub = []
         rowSkipped = False
         for r in range(len(matrix)):
